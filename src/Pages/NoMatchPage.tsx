@@ -1,6 +1,6 @@
 import * as React from "react";
 import { Box, Text } from "@chakra-ui/react";
-import { ButtonBack } from "../ButtonBack";
+import { ButtonBack } from "../components";
 
 export const NoMatchPage = () => {
   return (

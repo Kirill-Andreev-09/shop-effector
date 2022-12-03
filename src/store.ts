@@ -110,10 +110,7 @@ export const setSortProducts = createEvent<{
   active: boolean;
 }>();
 export const setCountItem = createEvent<number>();
-export const addTodo = createEvent();
-export const update = createEvent<{ id: number; text: string }>();
-export const remove = createEvent<number>();
-export const toggle = createEvent<number>();
+export const clearFilters = createEvent();
 
 export const getData = createEffect(async (url: string) => {
   const req = await fetch(url);
@@ -182,4 +179,11 @@ export default createStore<Store>({
     displayItems: displayItems,
     filterData: setDisplayItems(state.initData, displayItems, state),
     data: setDisplayItems(state.initData, displayItems, state),
+  }))
+  .on(clearFilters, (state) => ({
+    ...state,
+    search: "",
+    searchCategory: "",
+    sortField: "",
+    sort: sortData,
   }));

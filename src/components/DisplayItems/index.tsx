@@ -1,9 +1,9 @@
 import * as React from "react";
-import { Grid, Select } from "@chakra-ui/react";
-import { ColorModeSwitcher } from "../ColorModeSwitcher";
-
+import { Box, Grid, Select } from "@chakra-ui/react";
 import $store, { setCountItem } from "../../store";
 import { useStore } from "effector-react";
+import { ColorModeSwitcher } from "../ColorModeSwitcher";
+import { ClearFilters } from "../ClearFilters";
 
 const handleChange = (event: React.SyntheticEvent<HTMLSelectElement>) => {
   const count = Number(event.currentTarget.value);
@@ -14,10 +14,15 @@ const DisplayItems = () => {
   const store = useStore($store);
 
   return (
-    <Grid pt={2} templateColumns="1fr 1fr" columnGap="3">
+    <Grid pt={2} templateColumns="1fr 5fr 5fr" columnGap="3">
       <ColorModeSwitcher />
 
-      <Select defaultValue={store.displayItems} onChange={handleChange}>
+      <ClearFilters />
+      <Select
+        width="100%"
+        defaultValue={store.displayItems}
+        onChange={handleChange}
+      >
         <option value="2">2</option>
         <option value="3">3</option>
         <option value="5">5</option>

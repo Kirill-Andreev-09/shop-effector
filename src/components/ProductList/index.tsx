@@ -2,9 +2,9 @@ import React, { useCallback } from "react";
 import { Flex } from "@chakra-ui/react";
 import { useStore } from "effector-react";
 import $store from "../../store";
-import ProductCard from "../ProductCard";
 import { Loader } from "../Loader";
 import { useNavigate } from "react-router-dom";
+import { ProductCard } from "..";
 
 const ProductList = () => {
   const store = useStore($store);

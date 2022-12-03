@@ -1,12 +1,12 @@
 import * as React from "react";
 import { Box } from "@chakra-ui/react";
 import { FC, useEffect } from "react";
-import $store, { getDataProductById, IProduct } from "../../store";
+import $store, { getDataProductById, IProduct } from "../store";
 import { useStore } from "effector-react";
-import { url } from "../../api/constants";
-import ProductCard from "../ProductCard";
+import { url } from "../api/constants";
+
 import { useParams } from "react-router-dom";
-import { ButtonBack } from "../ButtonBack";
+import { ButtonBack, ProductCard } from "../components";
 
 interface IProductPage {
   id?: string;

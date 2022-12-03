@@ -29,8 +29,7 @@ const ProductCard: FC<IProductCard> = ({ product, handleClick, fullSize }) => {
   return (
     <Card
       width={fullSize ? "100%" : "350px"}
-      margin={fullSize ? 0 : 1}
-      mt={fullSize ? 3 : 0}
+      margin={fullSize ? "10px 0 0 0" : 1}
       className="card"
     >
       <CardBody>
@@ -112,4 +111,4 @@ const ProductCard: FC<IProductCard> = ({ product, handleClick, fullSize }) => {
   );
 };
 
-export default ProductCard;
+export { ProductCard };

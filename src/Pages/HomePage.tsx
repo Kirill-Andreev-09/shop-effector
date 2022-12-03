@@ -1,14 +1,16 @@
 import * as React from "react";
 import { Box } from "@chakra-ui/react";
 import { useEffect } from "react";
-import $store, { getCategories, getData } from "../../store";
+import $store, { getCategories, getData } from "../store";
 import { useStore } from "effector-react";
-import { DisplayItems } from "../DisplayItems";
-import { Categories } from "../Categories";
-import { Sorting } from "../Sorting";
-import { Search } from "../Search";
-import { ProductList } from "../ProductList";
-import { url } from "../../api/constants";
+import { url } from "../api/constants";
+import {
+  Categories,
+  DisplayItems,
+  ProductList,
+  Search,
+  Sorting,
+} from "../components";
 
 export const HomePage = () => {
   useEffect(() => {
